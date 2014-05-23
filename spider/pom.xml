@@ -1,0 +1,111 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.hp.it.wstax</groupId>
+  <artifactId>spider</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>spider</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <nexus-home-url>http://c0007727.itcs.hp.com:8070/nexus-2.5.0-04</nexus-home-url>
+  </properties>
+ 
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.8.1</version>
+      <scope>test</scope>
+    </dependency>
+   <!--  <dependency>
+	   <groupId>log4j</groupId>
+	   <artifactId>log4j</artifactId>
+	   <version>1.2.14</version>
+	 </dependency> -->
+    <dependency>
+    	<groupId>net.sourceforge.htmlunit</groupId>
+    	<artifactId>htmlunit</artifactId>
+    	<version>2.13</version>
+    </dependency>
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>2.38.0</version>
+    </dependency>
+    <dependency>
+        <groupId>com.opera</groupId>
+        <artifactId>operadriver</artifactId>
+    </dependency>
+   <!--  <dependency>
+    	<groupId>org.seleniumhq.selenium</groupId>
+    	<artifactId>selenium-chrome-driver</artifactId>
+    	<version>2.38.0</version>
+    </dependency> -->
+   <dependency>
+   	<groupId>commons-io</groupId>
+   	<artifactId>commons-io</artifactId>
+   	<version>2.4</version>
+   </dependency>
+   <!-- dependency>
+   	<groupId>microsoft-sqljdbc4</groupId>
+   	<artifactId>sqljdbc4</artifactId>
+   	<version>4.0.2206.100</version>
+   </dependency>    <dependency>
+	  <groupId>com.vertica</groupId>
+	  <artifactId>vertica-jdbc</artifactId>
+	  <version>7.0.0</version>
+	</dependency>-->
+
+   <dependency>
+   	<groupId>dom4j</groupId>
+   	<artifactId>dom4j</artifactId>
+   	<version>1.6.1</version>
+   	<exclusions>
+   		<exclusion>
+   			<artifactId>xml-apis</artifactId>
+   			<groupId>xml-apis</groupId>
+   		</exclusion>
+   	</exclusions>
+   </dependency>
+
+
+   <dependency>
+   	<groupId>org.hibernate</groupId>
+   	<artifactId>hibernate-core</artifactId>
+   	<version>4.3.4.Final</version>
+   </dependency>
+  </dependencies>
+  <dependencyManagement>
+      <dependencies>
+          <dependency>
+              <groupId>com.opera</groupId>
+              <artifactId>operadriver</artifactId>
+              <version>1.5</version>
+              <exclusions>
+                  <exclusion>
+                      <groupId>org.seleniumhq.selenium</groupId>
+                      <artifactId>selenium-remote-driver</artifactId>
+                  </exclusion>
+              </exclusions>
+          </dependency>
+      </dependencies>
+  </dependencyManagement>
+  
+ <distributionManagement>  
+	  <repository>  
+	    <id>cloud-nexus-releases</id>  
+      	<name>Nexus Release Repository</name>  
+      	<url>${nexus-home-url}/content/repositories/releases/</url>  
+	  </repository>  
+	  <snapshotRepository>  
+	    <id>cloud-nexus-snapshot</id>  
+	    <name>Nexus Snapshot Repository</name>  
+	    <url>${nexus-home-url}/content/repositories/snapshots/</url>  
+	  </snapshotRepository>  
+	</distributionManagement> 
+</project>
