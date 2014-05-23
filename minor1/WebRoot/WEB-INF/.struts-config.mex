@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/user.do" location="50,50" dimension="208,84" />
+  <StrutsActivity path="/course.do" location="350,150" dimension="220,84" />
+  <StrutsActivity path="/login.jsp" location="950,50" dimension="100,48" />
+  <StrutsActivity path="/main.jsp" location="650,50" dimension="94,48" />
+  <StrutsActivity path="/jsp/course/detail.jsp" location="950,150" dimension="172,48" />
+  <StrutsActivity path="/jsp/course/show.jsp" location="950,250" dimension="160,48" />
+  <StrutsActivity path="/jsp/course/course_list.jsp" location="650,350" dimension="202,48" />
+  <StrutsActivity path="/jsp/course/stu_list.jsp" location="950,350" dimension="184,48" />
+  <StrutsActivity path="/jsp/course/select.jsp" location="50,250" dimension="172,48" />
+  <StrutsActivity path="/jsp/course/edit.jsp" location="350,350" dimension="160,48" />
+  <StrutsActivity path="/jsp/course/list.jsp" location="650,150" dimension="160,48" />
+  <StrutsActivity path="/jsp/course/regCourse.jsp" location="650,250" dimension="190,48" />
+  <StrutsActivity path="/jsp/course/dolist.jsp" location="50,350" dimension="172,48" />
+  <StrutsActivity path="/index.jsp" location="350,50" dimension="100,48" />
+  <StrutsActivity path="/error.jsp" location="50,450" dimension="100,48" />
+  <StrutsActivity path="/regerr.jsp" />
+  <StrutsTransition id="/course.do,select,/jsp/course/select.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,192" />
+      <AbsolutePoint location="136,192" />
+      <AbsolutePoint location="136,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,regerr,/regerr.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="154,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/course.do,show1,/jsp/course/show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="570,213" />
+      <AbsolutePoint location="1030,213" />
+      <AbsolutePoint location="1030,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/course.do,dolist,/jsp/course/dolist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="460,234" />
+      <AbsolutePoint location="460,374" />
+      <AbsolutePoint location="222,374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/course.do,detail,/jsp/course/detail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="460,192" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/course.do,regCourse,/jsp/course/regCourse.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="460,192" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/course.do,edit,/jsp/course/edit.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="460,192" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/course.do,list,/jsp/course/list.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="570,174" />
+      <AbsolutePoint location="650,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,login,/login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="154,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/course.do,err,/error.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,162" />
+      <AbsolutePoint location="-45,162" />
+      <AbsolutePoint location="-45,474" />
+      <AbsolutePoint location="50,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/course.do,main,/main.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="465,150" />
+      <AbsolutePoint location="465,74" />
+      <AbsolutePoint location="650,74" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/course.do,clist,/jsp/course/course_list.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="525,234" />
+      <AbsolutePoint location="525,374" />
+      <AbsolutePoint location="650,374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/course.do,stulist,/jsp/course/stu_list.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="460,192" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,main,/main.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="154,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,err,/error.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="237,134" />
+      <AbsolutePoint location="237,474" />
+      <AbsolutePoint location="150,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+
